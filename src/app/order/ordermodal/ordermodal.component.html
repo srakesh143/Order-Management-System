@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form (ngSubmit)="onSubmit( orderEdit.value)" #orderEdit="ngForm">
+                <div class="form-group">
+                    <label for="ordernumber">Order Number:</label>
+                    <input type="text" class="form-control" name="orderNumber" [ngModel]="ordersModal?.orderNumber"
+                        (ngModelChange)="ordersModal.orderNumber = $event" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderduedate">Order Due Date:</label>
+                    <input type="text" class="form-control" name="orderDueDate" [(ngModel)]="ordersModal.orderDueDate"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="customername">Customer Name:</label>
+                    <input type="text" class="form-control" name="customerName" [(ngModel)]="ordersModal.customerName"
+                        required>
+                </div>
+                <div class="form-group">
+                    <fieldset ngModelGroup="customerAddress">
+                        <div class="form-group">
+                            <label for="doorno">Door No.:</label>
+                            <input type="text" name="doorNo" [ngModel]="ordersModal?.customerAddress?.doorNo"
+                                (ngModelChange)="ordersModal.customerAddress.doorNo = $event" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="area">Area:</label>
+                            <input type="text" name="area" [ngModel]="ordersModal?.customerAddress?.area"
+                                (ngModelChange)="ordersModal.customerAddress.area = $event" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City:</label>
+                            <input type="text" name="city" [ngModel]="ordersModal?.customerAddress?.city"
+                                (ngModelChange)="ordersModal.customerAddress.city = $event" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State:</label>
+                            <input type="text" name="state" [ngModel]="ordersModal?.customerAddress?.state"
+                                (ngModelChange)="ordersModal.customerAddress.state = $event" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pin">pin:</label>
+                            <input type="text" name="pin" [ngModel]="ordersModal?.customerAddress?.pin"
+                                (ngModelChange)="ordersModal.customerAddress.pin = $event" required>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <label for="cusphnnumber">Customer Phone Number:</label>
+                    <input type="text" class="form-control" name="customerPhone" [(ngModel)]="ordersModal.customerPhone"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="ordertotal">Order Total:</label>
+                    <input type="text" class="form-control" name="orderTotal" [(ngModel)]="ordersModal.orderTotal"
+                        required>
+                </div>
+                <button type="submit" class="btn btn-success">Save</button>
+            </form>
+        </div>
+    </div>
+</div>

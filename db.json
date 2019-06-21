@@ -1,0 +1,63 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "orderNumber": "NYK-2598-6862",
+      "orderDueDate": "23-06-2019",
+      "customerName": "customer1",
+      "customerAddress": {
+        "doorNo": "A/36",
+        "area": "Kondapur",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "pin": 500029
+      },
+      "customerPhone": 9878909878,
+      "orderTotal": 1650
+    },
+    {
+      "id": 2,
+      "orderNumber": "NYK-2520-5062",
+      "orderDueDate": "25-06-2019",
+      "customerName": "customer2",
+      "customerAddress": {
+        "doorNo": "A/35",
+        "area": "Kondapur",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "pin": 500029
+      },
+      "customerPhone": 9437867905,
+      "orderTotal": 1200
+    },
+    {
+      "id": 3,
+      "orderNumber": "NYK-2106-0936",
+      "orderDueDate": "28-06-2019",
+      "customerName": "customer3",
+      "customerAddress": {
+        "doorNo": "A/35",
+        "area": "Kondapur",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "pin": 500029
+      },
+      "customerPhone": 9861234567,
+      "orderTotal": 1540
+    }
+  ],
+  "users": [
+    {
+      "userName": "Test1",
+      "passWord": "Test1"
+    },
+    {
+      "userName": "Test2",
+      "passWord": "Test2"
+    },
+    {
+      "userName": "Test3",
+      "passWord": "Test3"
+    }
+  ]
+}

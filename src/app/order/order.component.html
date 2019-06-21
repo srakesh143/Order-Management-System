@@ -1,0 +1,33 @@
+<button style="float: right;" class="btn btn-danger" (click)="open()">New Order </button>
+<div class="container" style="clear:both;">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Order Number</th>
+        <th>Order Due Date</th>
+        <th>Customer Name</th>
+        <th>Customer Address</th>
+        <th>Customer Phone no</th>
+        <th>Order Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{order.orderNumber}}</td>
+        <td>{{order.orderDueDate}}</td>
+        <td>{{order.customerName}}</td>
+        <td *ngIf="order.customerAddress">
+          {{order.customerAddress.doorNo}},
+          {{order.customerAddress.area}},
+          {{order.customerAddress.city}},
+          {{order.customerAddress.state}},
+          {{order.customerAddress.pin}}
+        </td>
+        <td>{{order.customerPhone}}</td>
+        <td>{{order.orderTotal}}</td>
+        <td><button class="btn btn-primary" (click)="update(order)">Edit</button></td>
+        <td><button class="btn btn-primary" (click)="deleteOrder(order)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
