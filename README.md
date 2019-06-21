@@ -6,6 +6,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## For Backend
+Install JSON Server-
+npm install -g json-server
+
+Start JSON Server-
+json-server --watch db.json
+
+I have created a JSON srver for that I have created a db.json file
+The JSON file contains Orders and Users
+the Orders array contains  objects of order number,order due date etc
+the Users array contains objects of username and password for the validation purpose.
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
